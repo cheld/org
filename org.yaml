@@ -1,0 +1,78 @@
+---
+orgs:
+  test-user-org:
+    admins:
+    - boez-za
+    - cheld
+    billing_email: c-held@web.de
+    company: ""
+    default_repository_permission: none
+    description: ""
+    email: ""
+    has_organization_projects: true
+    has_repository_projects: true
+    location: ""
+    members_can_create_repositories: true
+    name: ""
+    repos:
+      admin-project-member:
+        default_branch: main
+        has_projects: true
+        private: true
+      create-private-repo:
+        default_branch: main
+        has_projects: true
+        private: false
+      create-repo-as-member:
+        default_branch: main
+        has_projects: true
+      demo-repository:
+        default_branch: main
+        description: A code repository designed to show the best GitHub has to offer.
+        has_projects: true
+        has_wiki: false
+        private: false
+      my-test:
+        default_branch: main
+        has_projects: true
+        private: true
+      test-admin-lost:
+        default_branch: main
+        has_projects: true
+      test-gh:
+        default_branch: main
+        has_projects: true
+        private: true
+      one-more-project:
+        default_branch: main
+        has_projects: true
+        private: true
+    teams:
+      all:
+        description: ""
+        maintainers:
+        - cheld
+        privacy: closed
+        repos:
+          my-test: read
+      demo-repository-admin:
+        description: ""
+        maintainers:
+        - cheld
+        - boez-za
+        privacy: closed
+        repos:
+          demo-repository: maintain
+      my-new-team:
+        description: ""
+        maintainers:
+        - cheld
+        privacy: closed
+      test:
+        description: "my test description"
+        maintainers:
+        - cheld
+        - cheld-demo
+        privacy: closed
+        repos:
+          one-more-project: maintain
