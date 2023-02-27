@@ -1,15 +1,19 @@
 #!/bin/bash
-cd "$(dirname "$0")"
+cd "$(dirname "$0")"/..
 
-CONFIG=../config/org.yaml
-APPROVED_REPOS=../config/approved-repos.yaml
-APPROVED_MEMBERS=../config/validated-members.yaml
+CONFIG=${1:-org.yaml}   
+APPROVED_MEMBERS=${2:-ospo-approvals/members.yaml} 
+APPROVED_REPOS=${3:-ospo-approvals/repos.yaml} 
+
+rm -Rf ospo-approvals
+git clone https://github.com/cheld/ospo-approvals.git
+
 
 # Check if all public repositories have been approved by OSPO
 num_of_public_repos=`yq -o json '.orgs.*.repos | with_entries(select(.value.private=="false")) | keys | length - 1' <$CONFIG`
 for i in `seq 0 $num_of_public_repos`; do
     repo_name=`yq -o json ".orgs.*.repos | with_entries(select(.value.private==false)) | keys | .[ $i ]" <$CONFIG`
-    repo_already_approved=`yq -o json ".[] | select(. == $repo_name)" <$APPROVED_REPOS`
+    repo_already_approved=`yq -o json ".*.[] | select(. == $repo_name)" <$APPROVED_REPOS`
 
     if [ -z "$repo_already_approved" ]; then
         echo "Error: Repository $repo_name is not approved yet. Add $repo_name to the file $APPROVED_REPOS and create a pull request to trigger the review process."
@@ -23,7 +27,7 @@ for i in `seq 0 $number_of_org_members`; do
     member_name=`yq -o json ".orgs.*.teams | [ .[].maintainers.[] ] | unique | .[$i]" <$CONFIG `
     member_already_approved=`yq -o json ". | with_entries (select(.key == $member_name))" <$APPROVED_MEMBERS`
 
-    if [ "$member_already_approved" == "{}" ]; then
+    if [ "$member_already_approved" == "" ] || [ "$member_already_approved" == "{}" ] ; then
         echo "Error: Email of member $member_name is not validated yet. Add $member_name to the file $APPROVED_MEMBERS and create a pull request to trigger the validation process."
         exit 1
     fi

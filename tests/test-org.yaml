@@ -1,0 +1,77 @@
+---
+orgs:
+  test-user-org:
+    admins:
+    - jenny
+    - joe
+    company: ""
+    default_repository_permission: none
+    description: ""
+    email: ""
+    has_organization_projects: true
+    has_repository_projects: true
+    location: ""
+    members_can_create_repositories: true
+    name: ""
+    repos:
+      project-member:
+        default_branch: main
+        has_projects: true
+        private: true
+      private-repo:
+        default_branch: main
+        has_projects: true
+        private: true
+      repo-as-member:
+        default_branch: main
+        has_projects: true
+      demo-repository:
+        default_branch: main
+        description: A code repository designed to show the best GitHub has to offer.
+        has_projects: true
+        has_wiki: false
+        private: false
+      my-test:
+        default_branch: main
+        has_projects: true
+        private: true
+      project:
+        default_branch: main
+        has_projects: true
+      test-cli:
+        default_branch: main
+        has_projects: true
+        private: true
+      one-more-project:
+        default_branch: main
+        has_projects: true
+        private: true
+    teams:
+      all:
+        description: ""
+        maintainers:
+        - joe
+        privacy: closed
+        repos:
+          my-test: read
+      demo-repository-admin:
+        description: ""
+        maintainers:
+        - joe
+        - jenny
+        privacy: closed
+        repos:
+          demo-repository: maintain
+      my-new-team:
+        description: ""
+        maintainers:
+        - joe
+        privacy: closed
+      test:
+        description: "my test description"
+        maintainers:
+        - joe
+        - bill
+        privacy: closed
+        repos:
+          one-more-project: maintain
