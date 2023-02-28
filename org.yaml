@@ -72,7 +72,6 @@ orgs:
         description: my test description
         maintainers:
         - cheld
-        - cheld-demo
         privacy: closed
         repos:
           one-more-project: maintain
