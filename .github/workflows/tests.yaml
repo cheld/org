@@ -3,14 +3,12 @@ name: Tests
 on:
   push:
     branches: [ "main" ]
-      paths:
+    paths:
         - 'scripts/**'
         - 'tests/**'
   pull_request:
     branches: [ "main" ]
-    paths:
-      - 'scripts/**'
-      - 'tests/**'
+
 jobs:
   build:
     runs-on: ubuntu-latest
