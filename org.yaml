@@ -6,7 +6,7 @@ orgs:
     - cheld
     company: "Allianz"
     default_repository_permission: none
-    description: ""
+    description: "test"
     email: ""
     has_organization_projects: true
     has_repository_projects: true
