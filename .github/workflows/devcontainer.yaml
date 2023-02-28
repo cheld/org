@@ -1,11 +1,10 @@
-name: Tests
+name: DevContainer
 
 on:
   push:
     branches: [ "main" ]
     paths:
-        - 'scripts/**'
-        - 'tests/**'
+        - '.devcontainer/**'
   pull_request:
     branches: [ "main" ]
 
@@ -23,9 +22,8 @@ jobs:
         username: ${{ github.repository_owner }}
         password: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Run tests inside DevContainer
+    - name: Build and push DevContainer
       uses: devcontainers/ci@v0.3
       with:
-        cacheFrom: ghcr.io/cheld/org-devcontainer
-        push: never
-        runCmd: ./tests/run-test.sh
+        imageName: ghcr.io/cheld/org-devcontainer
+        push: always
