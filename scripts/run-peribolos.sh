@@ -1,5 +1,7 @@
 #!/bin/bash
 
+env
+
 if [ -z "$GITHUB_TOKEN" ]; then
     echo "Github token not set"
 else 
