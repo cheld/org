@@ -23,5 +23,5 @@ jobs:
     - name: Build and run dev-container task
       uses: devcontainers/ci@v0.2
       with:
-        imageName: ghcr.io/cheld/jekyll-devcontainer
+        imageName: ghcr.io/cheld/org-devcontainer
         runCmd: ./tests/run-test.sh
