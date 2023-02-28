@@ -10,11 +10,11 @@ orgs:
     email: "cheld@test.com"
     has_organization_projects: false
     has_repository_projects: true
-    location: ""
+    location: "Germany"
     members:
     - cheld-demo
     members_can_create_repositories: true
-    name: ""
+    name: "test-name"
     repos:
       admin-project-member:
         default_branch: main
