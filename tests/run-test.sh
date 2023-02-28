@@ -1,8 +1,6 @@
 #!/bin/bash
 cd "$(dirname "$0")"/..
 
-echo "run tests"
-
 # No approved members. Must fail
 echo "Run tests with no approved members..."
 result=`./scripts/lint_org.sh ./tests/test-org.yaml ./tests/test-members-empty.yaml ./tests/test-repos-ok.yaml`
