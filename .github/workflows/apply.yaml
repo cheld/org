@@ -30,4 +30,4 @@ jobs:
         push: never
         runCmd: ./scripts/run-peribolos.sh
         env: |
-            GITHUB_TOKEN=HelloWORLD
+            GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
