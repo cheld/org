@@ -4,6 +4,9 @@ if [ -z "$GITHUB_TOKEN" ]; then
     echo "Variable GITHUB_TOKEN not set"
     exit 1
 fi
+if [ "$GITHUB_TOKEN"=="hello" ]; then
+    echo "token as expected"
+fi
 ORG="test-user-org"
 
 ramtmp="$(mktemp -p /dev/shm/)"
