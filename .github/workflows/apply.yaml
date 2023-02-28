@@ -29,3 +29,5 @@ jobs:
         cacheFrom: ghcr.io/cheld/org-devcontainer
         push: never
         runCmd: ./scripts/run-peribolos.sh
+        env: |
+            GITHUB_TOKEN=HelloWORLD
