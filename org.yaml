@@ -7,7 +7,7 @@ orgs:
     company: "Allianz"
     default_repository_permission: none
     description: "my test description3"
-    email: ""
+    email: "cheld@test.com"
     has_organization_projects: true
     has_repository_projects: true
     location: ""
