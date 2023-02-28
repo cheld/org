@@ -51,6 +51,7 @@ orgs:
         description: ""
         maintainers:
         - joe
+        - aaa
         privacy: closed
         repos:
           my-test: read

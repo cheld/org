@@ -1,6 +1,8 @@
 #!/bin/bash
 cd "$(dirname "$0")"/..
 
+echo "Linting org.yaml..."
+
 CONFIG=${1:-org.yaml}   
 APPROVED_MEMBERS=${2:-ospo-approvals/members.yaml} 
 APPROVED_REPOS=${3:-ospo-approvals/repos.yaml} 

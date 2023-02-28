@@ -6,7 +6,7 @@ orgs:
     - cheld
     company: "Allianz"
     default_repository_permission: none
-    description: "my test description2"
+    description: "my test description3"
     email: ""
     has_organization_projects: true
     has_repository_projects: true
@@ -53,6 +53,7 @@ orgs:
         description: ""
         maintainers:
         - cheld
+        - aaa
         privacy: closed
         repos:
           my-test: read

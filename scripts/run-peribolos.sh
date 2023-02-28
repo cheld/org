@@ -10,4 +10,9 @@ ORG=${1:-"test-user-org"}
 ramtmp="$(mktemp -p /dev/shm/)"
 echo $GITHUB_TOKEN > $ramtmp
 
+#./scripts/lint_org.sh
+# if [ $? -eq 1 ]; then
+#    exit 1
+# fi
+
 peribolos --github-token-path $ramtmp --config-path org.yaml -fix-org --confirm
