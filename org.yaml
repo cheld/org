@@ -2,7 +2,6 @@
 orgs:
   test-user-org:
     admins:
-    - boez-za
     - cheld
     company: "Allianz"
     default_repository_permission: "read"
@@ -12,7 +11,6 @@ orgs:
     has_repository_projects: true
     location: "Germany"
     members:
-    - cheld-demo
     members_can_create_repositories: true
     name: "test-name"
     repos:
