@@ -1,11 +1,16 @@
-name: PR_auto
+name: Tests
 
 on:
   push:
     branches: [ "main" ]
+      paths:
+        - 'scripts/**'
+        - 'tests/**'
   pull_request:
     branches: [ "main" ]
-
+    paths:
+      - 'scripts/**'
+      - 'tests/**'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,7 +25,7 @@ jobs:
         username: ${{ github.repository_owner }}
         password: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Run tests for the org linter inside DevContainer
+    - name: Run tests inside DevContainer
       uses: devcontainers/ci@v0.3
       with:
         imageName: ghcr.io/cheld/org-devcontainer
