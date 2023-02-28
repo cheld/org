@@ -29,6 +29,6 @@ jobs:
       with:
         cacheFrom: ghcr.io/cheld/org-devcontainer
         push: never
-        runCmd: ./scripts/run-peribolos.sh
+        runCmd: ./scripts/run-peribolos.sh 
         env: |
-            GITHUB_TOKEN=${{ secrets.TEST }}
+            GITHUB_TOKEN=${{ secrets.TOKEN }}

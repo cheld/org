@@ -6,11 +6,13 @@ orgs:
     - cheld
     company: "Allianz"
     default_repository_permission: none
-    description: "test3"
+    description: "my test description2"
     email: ""
     has_organization_projects: true
     has_repository_projects: true
     location: ""
+    members:
+    - cheld-demo
     members_can_create_repositories: true
     name: ""
     repos:
@@ -21,7 +23,7 @@ orgs:
       create-private-repo:
         default_branch: main
         has_projects: true
-        private: false
+        private: true
       create-repo-as-member:
         default_branch: main
         has_projects: true
@@ -30,8 +32,12 @@ orgs:
         description: A code repository designed to show the best GitHub has to offer.
         has_projects: true
         has_wiki: false
-        private: false
+        private: true
       my-test:
+        default_branch: main
+        has_projects: true
+        private: true
+      one-more-project:
         default_branch: main
         has_projects: true
         private: true
@@ -39,10 +45,6 @@ orgs:
         default_branch: main
         has_projects: true
       test-gh:
-        default_branch: main
-        has_projects: true
-        private: true
-      one-more-project:
         default_branch: main
         has_projects: true
         private: true
@@ -68,7 +70,7 @@ orgs:
         - cheld
         privacy: closed
       test:
-        description: "my test description"
+        description: my test description
         maintainers:
         - cheld
         - cheld-demo
