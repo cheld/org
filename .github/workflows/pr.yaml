@@ -20,8 +20,9 @@ jobs:
         username: ${{ github.repository_owner }}
         password: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Build and run dev-container task
-      uses: devcontainers/ci@v0.2
+    - name: Run tests for the org linter inside DevContainer
+      uses: devcontainers/ci@v0.3
       with:
         imageName: ghcr.io/cheld/org-devcontainer
+        cacheFrom: ghcr.io/cheld/org-devcontainer
         runCmd: ./tests/run-test.sh
