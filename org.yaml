@@ -8,7 +8,7 @@ orgs:
     default_repository_permission: none
     description: "my test description3"
     email: "cheld@test.com"
-    has_organization_projects: true
+    has_organization_projects: false
     has_repository_projects: true
     location: ""
     members:
