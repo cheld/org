@@ -5,7 +5,7 @@ orgs:
     - boez-za
     - cheld
     billing_email: c-held@web.de
-    company: ""
+    company: "Allianz"
     default_repository_permission: none
     description: ""
     email: ""
