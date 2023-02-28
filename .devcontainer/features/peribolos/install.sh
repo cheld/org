@@ -9,3 +9,5 @@ cp ./peribolos /usr/local/bin
 
 go build -o proxy ./ghproxy/ghproxy.go
 cp ./proxy /usr/local/bin
+
+echo "done"
