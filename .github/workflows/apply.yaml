@@ -28,4 +28,4 @@ jobs:
       with:
         cacheFrom: ghcr.io/cheld/org-devcontainer
         push: never
-        runCmd: ./scripts/lint_org.sh
+        runCmd: ./scripts/run-peribolos.sh
