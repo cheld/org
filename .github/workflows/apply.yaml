@@ -1,10 +1,11 @@
-name: Apply to Github Organization
+name: Apply
 
 on:
   push:
     branches: [ "main" ]
     paths:
         - 'org.yaml'
+        - 'scripts/**'
 
   pull_request:
     branches: [ "main" ]
@@ -30,4 +31,4 @@ jobs:
         push: never
         runCmd: ./scripts/run-peribolos.sh
         env: |
-            GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
+            GITHUB_TOKEN=${{ secrets.TEST }}
