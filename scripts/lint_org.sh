@@ -6,7 +6,7 @@ APPROVED_MEMBERS=${2:-ospo-approvals/members.yaml}
 APPROVED_REPOS=${3:-ospo-approvals/repos.yaml} 
 
 rm -Rf ospo-approvals
-git clone https://github.com/cheld/ospo-approvals.git
+git clone -q https://github.com/cheld/ospo-approvals.git
 
 
 # Check if all public repositories have been approved by OSPO
@@ -16,7 +16,7 @@ for i in `seq 0 $num_of_public_repos`; do
     repo_already_approved=`yq -o json ".*.[] | select(. == $repo_name)" <$APPROVED_REPOS`
 
     if [ -z "$repo_already_approved" ]; then
-        echo "Error: Repository $repo_name is not approved yet. Add $repo_name to the file $APPROVED_REPOS and create a pull request to trigger the review process."
+        echo "Error: Repository $repo_name is not approved yet. Create a PR in github/allianz/ospo-approvals first."
         exit 1
     fi
 done
@@ -28,7 +28,7 @@ for i in `seq 0 $number_of_org_members`; do
     member_already_approved=`yq -o json ". | with_entries (select(.key == $member_name))" <$APPROVED_MEMBERS`
 
     if [ "$member_already_approved" == "" ] || [ "$member_already_approved" == "{}" ] ; then
-        echo "Error: Email of member $member_name is not validated yet. Add $member_name to the file $APPROVED_MEMBERS and create a pull request to trigger the validation process."
+        echo "Error: Email of member $member_name is not validated yet. Create a PR in github.com/allianz/ospo-approvals first."
         exit 1
     fi
 done
