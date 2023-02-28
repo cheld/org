@@ -5,7 +5,7 @@ orgs:
     - cheld
     company: "Allianz"
     default_repository_permission: "read"
-    description: "my test description3"
+    description: "my test description4"
     email: "cheld@test.com"
     has_organization_projects: false
     has_repository_projects: true
