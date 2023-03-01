@@ -1,25 +1,25 @@
----
 orgs:
   test-user-org:
     admins:
-    - cheld
     - boez-za
-    company: "Allianz"
-    default_repository_permission: "read"
-    description: "my test description4"
-    email: "cheld@test.com"
+    - cheld
+    billing_email: c-held@web.de
+    company: Allianz
+    default_repository_permission: read
+    description: my test description4
+    email: cheld@test.com
     has_organization_projects: false
     has_repository_projects: true
-    location: "Germany"
+    location: Germany
     members:
-        - cheld-demo
+    - cheld-demo
     members_can_create_repositories: true
-    name: "test-name"
+    name: test-name
     repos:
       admin-project-member:
         default_branch: main
         has_projects: true
-        private: false
+        private: true
       create-private-repo:
         default_branch: main
         has_projects: true
@@ -53,7 +53,6 @@ orgs:
         description: ""
         maintainers:
         - cheld
-        - aaa
         privacy: closed
         repos:
           my-test: read
@@ -74,6 +73,8 @@ orgs:
         description: my test description
         maintainers:
         - cheld
+        - cheld-demo
         privacy: closed
         repos:
           one-more-project: maintain
+
