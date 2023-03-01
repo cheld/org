@@ -3,6 +3,7 @@ orgs:
   test-user-org:
     admins:
     - cheld
+    - boez-za
     company: "Allianz"
     default_repository_permission: "read"
     description: "my test description4"
