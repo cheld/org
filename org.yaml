@@ -4,6 +4,7 @@ orgs:
     admins:
     - cheld
     - boez-za
+    - cheld-demo
     company: "Allianz"
     default_repository_permission: "read"
     description: "my test description4"
