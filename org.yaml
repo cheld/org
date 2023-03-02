@@ -69,6 +69,11 @@ orgs:
         maintainers:
         - cheld
         privacy: closed
+      peribolos-team:
+        description: ""
+        maintainers:
+        - cheld
+        privacy: closed
       test:
         description: my test description
         maintainers:

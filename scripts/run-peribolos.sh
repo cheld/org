@@ -15,4 +15,4 @@ echo $GITHUB_TOKEN > $ramtmp
 #    exit 1
 # fi
 
-peribolos --github-token-path $ramtmp --config-path org.yaml -fix-org -fix-org-members -fix-repos -allow-repo-publish -min-admins 2 --confirm 
+peribolos --github-token-path $ramtmp --config-path org.yaml -fix-org -fix-org-members -fix-repos -fix-teams -allow-repo-publish -min-admins 2 --confirm 
