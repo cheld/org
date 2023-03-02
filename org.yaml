@@ -78,17 +78,5 @@ orgs:
         maintainers:
         - cheld
         privacy: closed
-      peribolos-team:
-        description: ""
-        maintainers:
-        - cheld
-        privacy: closed
-      test:
-        description: my test description
-        maintainers:
-        - cheld
-        - cheld-demo
-        privacy: closed
-        repos:
-          one-more-project: maintain
+
 
