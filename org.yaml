@@ -42,9 +42,12 @@ orgs:
         has_projects: true
         private: true
       one-more-project:
+        allow_merge_commit: false
+        allow_rebase_merge: false
+        allow_squash_merge: false
+        archived: true
         default_branch: main
         has_projects: true
-        archived: true
         private: true
       peribolos-test:
         default_branch: main
@@ -74,6 +77,11 @@ orgs:
         repos:
           demo-repository: maintain
       my-new-team:
+        description: ""
+        maintainers:
+        - cheld
+        privacy: closed
+      peribolos-team:
         description: ""
         maintainers:
         - cheld
