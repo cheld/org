@@ -73,7 +73,7 @@ orgs:
         description: ""
         maintainers:
         - cheld
-        privacy: closed
+        privacy: open
       test:
         description: my test description
         maintainers:
