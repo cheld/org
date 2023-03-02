@@ -20,10 +20,6 @@ orgs:
         default_branch: main
         has_projects: true
         private: true
-      peribolos-test:
-        default_branch: main
-        has_projects: true
-        private: false
       create-private-repo:
         default_branch: main
         has_projects: true
