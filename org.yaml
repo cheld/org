@@ -34,13 +34,22 @@ orgs:
         has_wiki: false
         private: true
       my-test:
+        allow_merge_commit: false
+        allow_rebase_merge: false
+        allow_squash_merge: false
+        archived: true
         default_branch: main
         has_projects: true
         private: true
       one-more-project:
         default_branch: main
         has_projects: true
+        archived: true
         private: true
+      peribolos-test:
+        default_branch: main
+        has_projects: true
+        has_wiki: false
       test-admin-lost:
         default_branch: main
         has_projects: true
@@ -61,7 +70,7 @@ orgs:
         maintainers:
         - cheld
         - boez-za
-        privacy: closed
+        privacy: secret
         repos:
           demo-repository: maintain
       my-new-team:
@@ -73,6 +82,7 @@ orgs:
         description: ""
         maintainers:
         - cheld
+        privacy: closed
       test:
         description: my test description
         maintainers:
